@@ -54,6 +54,15 @@ body {
     font-size: 1.2em;
 }
 
+.username {
+    background: #8b5cf6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
 .coins, .level {
     background: #ffd700;
     padding: 10px 20px;

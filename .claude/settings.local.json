@@ -14,7 +14,10 @@
       "Bash(npm start)",
       "Bash(curl:*)",
       "Bash(rg:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(npm install:*)",
+      "Bash(NODE_ENV=test npm run test:api 2>&1)",
+      "Bash(NODE_ENV=test npm run test:integration 2>&1)"
     ],
     "deny": []
   }

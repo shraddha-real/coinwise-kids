@@ -9,7 +9,9 @@
     "client": "open index.html",
     "test": "mocha tests/**/*.test.js --timeout 10000",
     "test:api": "mocha tests/api/*.test.js --timeout 10000",
-    "test:integration": "mocha tests/integration/*.test.js --timeout 10000"
+    "test:integration": "mocha tests/integration/*.test.js --timeout 10000",
+    "test:watch": "mocha tests/**/*.test.js --timeout 10000 --watch",
+    "test:coverage": "nyc mocha tests/**/*.test.js --timeout 10000"
   },
   "keywords": [
     "education",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "axios": "^1.10.0",
     "chai": "^4.3.10",
+    "chai-http": "^5.1.2",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.1",
     "sinon": "^17.0.1",

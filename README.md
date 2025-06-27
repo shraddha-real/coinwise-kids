@@ -78,13 +78,52 @@ http://localhost:3000
 
 - `npm start` - Start the production server
 - `npm run dev` - Start development server with nodemon
-- `npm test` - Run test suite (if available)
+- `npm test` - Run all tests (37 tests)
+- `npm run test:api` - Run API tests only (30 tests)
+- `npm run test:integration` - Run integration tests only (7 tests)
+- `npm run test:watch` - Run tests in watch mode for development
+- `npm run test:coverage` - Run tests with code coverage report
+
+## 🧪 Testing
+
+CoinWise Kids includes a comprehensive test suite with 37 tests covering all major features:
+
+### Test Coverage
+
+- **User Management**: User creation, profile updates, progress tracking
+- **Game Features**: Hints system, achievements, game progress
+- **Social Features**: Progress sharing, friend comparisons
+- **Integration Tests**: Complete user journeys, multi-user scenarios
+- **Server Health**: Static file serving, MIME types, error handling
+
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run specific test suites
+npm run test:api          # API tests only (30 tests)
+npm run test:integration  # Integration tests only (7 tests)
+
+# Development testing
+npm run test:watch       # Watch mode for continuous testing
+npm run test:coverage    # Generate code coverage report
+```
+
+### Testing Stack
+
+- **Test Framework**: Mocha
+- **Assertion Library**: Chai
+- **HTTP Testing**: Supertest
+- **Test Structure**: BDD-style with descriptive test names
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Backend**: Node.js, Express.js
 - **Storage**: In-memory (server-side)
+- **Testing**: Mocha, Chai, Supertest
 - **Deployment**: Render
 
 ## 🎯 Learning Objectives

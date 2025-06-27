@@ -25,6 +25,9 @@ function saveUserData() {
 function updateScoreDisplay() {
     document.getElementById('totalCoins').textContent = userData.coins;
     document.getElementById('userLevel').textContent = userData.level;
+    // Display username from localStorage or API user data
+    const nickname = localStorage.getItem('userNickname') || userData.nickname || 'Player';
+    document.getElementById('userName').textContent = nickname;
 }
 
 // Add coins and check for level up

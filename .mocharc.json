@@ -1,0 +1,10 @@
+{
+  "timeout": 10000,
+  "exit": true,
+  "recursive": true,
+  "colors": true,
+  "reporter": "spec",
+  "require": [
+    "tests/test-config.js"
+  ]
+}
