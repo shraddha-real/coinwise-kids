@@ -1,7 +1,49 @@
+# Dependencies
 node_modules/
+
+# Environment variables
 .env
-.DS_Store
+.env.local
+.env.production
+
+# Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# Build files
+dist/
+build/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Claude
+.claude/
+
+# Backup files
+*.backup
+*.bak
+
+# Local notes
+notes.txt
+TODO.txt
