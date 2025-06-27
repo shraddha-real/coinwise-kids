@@ -12,14 +12,17 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Serve static files with proper MIME types
-app.use(express.static(path.join(__dirname), {
+app.use(express.static(__dirname, {
+    extensions: ['html', 'js', 'css', 'ico'],
     setHeaders: (res, filePath) => {
         if (filePath.endsWith('.js')) {
-            res.setHeader('Content-Type', 'application/javascript');
+            res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
         } else if (filePath.endsWith('.css')) {
-            res.setHeader('Content-Type', 'text/css');
+            res.setHeader('Content-Type', 'text/css; charset=UTF-8');
         } else if (filePath.endsWith('.html')) {
-            res.setHeader('Content-Type', 'text/html');
+            res.setHeader('Content-Type', 'text/html; charset=UTF-8');
+        } else if (filePath.endsWith('.json')) {
+            res.setHeader('Content-Type', 'application/json; charset=UTF-8');
         }
     }
 }));
@@ -454,10 +457,15 @@ function generateComparisonInsights(user1, user2) {
     return insights;
 }
 
+// Catch-all route to serve index.html for client-side routing
+app.get('*', (_, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 // Start server only if not in test mode
 if (process.env.NODE_ENV !== 'test') {
     app.listen(PORT, () => {
-        console.log(`CoinWise Kids server running on http://localhost:${PORT}`);
+        console.log(`CoinWise Kids server running on port ${PORT}`);
     });
 }
 
