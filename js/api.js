@@ -1,5 +1,5 @@
 // API client for CoinWise Kids
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = window.location.origin + '/api';
 
 class CoinWiseAPI {
     constructor() {
