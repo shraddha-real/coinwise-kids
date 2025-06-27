@@ -80,50 +80,12 @@ http://localhost:3000
 - `npm run dev` - Start development server with nodemon
 - `npm test` - Run test suite (if available)
 
-## 🌐 Deployment
-
-### Deploy to Render
-
-1. Push your code to GitHub
-2. Create account at [render.com](https://render.com)
-3. Create new Web Service
-4. Connect your GitHub repository
-5. Use these settings:
-   - Build Command: `npm install`
-   - Start Command: `npm start`
-
-The app will be live at `https://your-app-name.onrender.com`
-
 ## 🛠️ Tech Stack
 
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Backend**: Node.js, Express.js
 - **Storage**: In-memory (server-side)
 - **Deployment**: Render
-
-## 📁 Project Structure
-
-```
-coinwise-kids/
-├── index.html          # Main application page
-├── server.js           # Express server & API
-├── package.json        # Dependencies
-├── css/
-│   ├── styles.css      # Main styles
-│   └── animations.css  # Animation effects
-├── js/
-│   ├── main.js         # Core application logic
-│   ├── api.js          # API client
-│   ├── utils.js        # Utility functions
-│   ├── hints.js        # Hint system
-│   ├── share.js        # Progress sharing
-│   └── games/          # Game modules
-│       ├── store.js
-│       ├── piggybank.js
-│       ├── budget.js
-│       └── learn.js
-└── favicon.ico         # Site icon
-```
 
 ## 🎯 Learning Objectives
 
@@ -143,34 +105,6 @@ Children using CoinWise Kids will learn:
 - All data stored server-side
 - No social features
 - Kid-safe content
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 API Documentation
-
-### User Management
-- `POST /api/user/create` - Create new user
-- `GET /api/user/:userId` - Get user data
-- `POST /api/user/:userId/progress` - Update progress
-
-### Game Features
-- `POST /api/hint/use` - Use a hint
-- `GET /api/hint/:gameType` - Get hint info
-- `GET /api/achievements` - List achievements
-- `POST /api/achievement/unlock` - Unlock achievement
-
-### Progress Sharing
-- `GET /api/user/:userId/export` - Export progress
-- `GET /api/share/:shareCode` - View shared progress
-- `GET /api/parent/report/:userId` - Parent dashboard
 
 ## ⚠️ Known Limitations
 
