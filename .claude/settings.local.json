@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed:*)",
+      "Bash(cp:*)",
+      "Bash(grep:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(rm:*)",
+      "Bash(find:*)",
+      "Bash(npm test:*)",
+      "Bash(NODE_ENV=test npm test)",
+      "Bash(NODE_ENV=test npm test -- --grep \"should create a new user\")",
+      "Bash(npm start)",
+      "Bash(curl:*)",
+      "Bash(rg:*)",
+      "Bash(ls:*)"
+    ],
+    "deny": []
+  }
+}

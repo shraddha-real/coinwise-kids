@@ -1,0 +1,311 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.main-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    text-align: left;
+}
+
+.logo {
+    font-size: 2.5em;
+    color: #5a67d8;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #667;
+}
+
+.score-display {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2em;
+}
+
+.coins, .level {
+    background: #ffd700;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn {
+    background: #f56565;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #e53e3e;
+    transform: translateY(-2px);
+}
+
+/* Age Selection Styles */
+/* Main Menu Styles */
+.main-menu {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+    background: #e2e8f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #cbd5e0;
+}
+
+.menu-title {
+    font-size: 2.5em;
+    color: #5a67d8;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.game-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.game-card h3 {
+    font-size: 1.5em;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #4a5568;
+    font-size: 1.1em;
+}
+
+/* Game Container */
+.game-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional Styles for New Features */
+.user-registration {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.registration-form {
+    margin-top: 30px;
+}
+
+.registration-form label {
+    display: block;
+    font-size: 1.2em;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 3px solid #e2e8f0;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registration-form input:focus {
+    outline: none;
+    border-color: #5a67d8;
+}
+
+.register-btn {
+    padding: 15px 40px;
+    background: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #4c51bf;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(90, 103, 216, 0.3);
+}
+
+/* Leaderboard Styles */
+.leaderboard {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rankings-table {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.rankings-table thead {
+    background: #5a67d8;
+    color: white;
+}
+
+.rankings-table th,
+.rankings-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.rankings-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.rankings-table tbody tr:hover {
+    background: #f7fafc;
+}
+
+.rankings-table .current-player {
+    background: #e6fffa;
+    font-weight: bold;
+}
+
+/* Loading Animation */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #718096;
+    font-size: 1.2em;
+}
+
+.loading::after {
+    content: '...';
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2em;
+    }
+    
+    .age-groups {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

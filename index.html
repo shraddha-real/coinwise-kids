@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinWise Kids - Learn About Money!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo-container">
+                <h1 class="logo">🪙 CoinWise Kids</h1>
+                <p class="tagline">Learn about money the fun way!</p>
+            </div>
+            <div class="score-display" id="scoreDisplay" style="display: none;">
+                <span class="coins">🪙 <span id="totalCoins">0</span></span>
+                <span class="level">⭐ Level <span id="userLevel">1</span></span>
+                <button class="logout-btn" onclick="logout()">Switch Player</button>
+            </div>
+        </header>
+
+        <main id="mainContent">
+            <!-- User Registration -->
+            <div id="userRegistration" class="user-registration" style="display: none;">
+                <h2 class="welcome-title">Welcome to CoinWise Kids!</h2>
+                <div class="registration-form">
+                    <label for="nickname">What's your nickname?</label>
+                    <input type="text" id="nickname" placeholder="Enter your nickname" maxlength="20">
+                    <button class="register-btn" onclick="registerUser()">Let's Start! 🚀</button>
+                </div>
+            </div>
+
+
+            <!-- Main Menu -->
+            <div id="mainMenu" class="main-menu" style="display: none;">
+                <h2 class="menu-title">Choose Your Adventure!</h2>
+                <div class="game-grid">
+                    <div class="game-card" onclick="startGame('store')">
+                        <div class="game-icon">🛒</div>
+                        <h3>Virtual Store</h3>
+                        <p>Practice shopping and making change!</p>
+                    </div>
+                    <div class="game-card" onclick="startGame('piggybank')">
+                        <div class="game-icon">🐷</div>
+                        <h3>Piggy Bank</h3>
+                        <p>Save money and reach your goals!</p>
+                    </div>
+                    <div class="game-card" onclick="startGame('budget')">
+                        <div class="game-icon">📊</div>
+                        <h3>Budget Builder</h3>
+                        <p>Plan your spending wisely!</p>
+                    </div>
+                    <div class="game-card" onclick="startGame('learn')">
+                        <div class="game-icon">📚</div>
+                        <h3>Money Lessons</h3>
+                        <p>Learn about needs, wants, and saving!</p>
+                    </div>
+                    <div class="game-card" onclick="showShareProgress()">
+                        <div class="game-icon">🎆</div>
+                        <h3>Share Progress</h3>
+                        <p>Show off your achievements!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Container -->
+            <div id="gameContainer" class="game-container" style="display: none;">
+                <!-- Games will be loaded here dynamically -->
+            </div>
+        </main>
+
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/games/store.js"></script>
+    <script src="js/games/piggybank.js"></script>
+    <script src="js/games/budget.js"></script>
+    <script src="js/games/learn.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/hints.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
